@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white font-sans antialiased selection:bg-white selection:text-black overflow-x-hidden;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .nav-pill {
+    @apply border border-white/30 rounded-full px-4 py-2 text-sm font-normal bg-transparent transition-colors hover:bg-white hover:text-black;
+  }
+
+  .small-caps {
+    @apply text-[11px] uppercase tracking-[0.05em] font-medium text-white/60;
+  }
+
+  .horizontal-line {
+    @apply h-[1px] bg-white/20 w-full;
+  }
+}
